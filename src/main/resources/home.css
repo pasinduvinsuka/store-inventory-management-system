@@ -1,0 +1,55 @@
+#sideMenu{
+    -fx-background-color: white;
+}
+#pane{
+    -fx-background-color: #f3f3f5;
+}
+
+/*Top-Area*/
+#topContainer{
+    -fx-background-color: white;
+    -fx-background-radius: 6px;
+}
+
+#topIconContainer{
+    -fx-background-color: #f3f3f3;
+    -fx-background-radius: 8px;
+}
+
+#topTitleText{
+    -fx-font-family: "monospace ";
+    -fx-text-fill: gray;
+}
+
+#topData{
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-font-family: "monospace ";
+    -fx-text-fill: #3f3f3f;
+
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+#chartContainer{
+    -fx-background-color: white;
+    -fx-background-radius: 6px;
+}
+#pieChartContainer{
+    -fx-background-color: white;
+    -fx-background-radius: 6px;
+}
+
+#topSellingChannelContainer{
+    -fx-background-radius: 6px;
+    -fx-background-color: white;
+}
+
+#topSellingItemContainer{
+    -fx-background-radius: 6px;
+    -fx-background-color: white;
+}
+
+#crudPane{
+    -fx-background-radius: 6px;
+    -fx-background-color: white;
+}
