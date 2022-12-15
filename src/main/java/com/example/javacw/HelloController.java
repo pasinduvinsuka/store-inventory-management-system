@@ -17,6 +17,8 @@ import java.sql.*;
 
 public class HelloController {
 
+
+
     @FXML
     private Pane homepage;
     @FXML
@@ -35,25 +37,20 @@ public class HelloController {
     private AnchorPane dashboardPane;
 
 
+
+
+
     public void loginValidate() {
-           Connection connection=null;
-           PreparedStatement preparedStatement=null;
-           ResultSet resultSet=null;
-
         try {
-            //Class.forName("com.mysql.jdbc.Driver");
-            String databaseName="dvd";
-            String url="jdbc:mysql://localhost:3306/"+databaseName;
-            String dbUsername="root";
-            String dbPassword="password";
 
-            connection= DriverManager.getConnection(url,dbUsername,dbPassword);
+            database connection=new database();
+            connection.connectDB();
 
             String sql="select * from logindetails where username=? and password=? ;";
-            preparedStatement=connection.prepareStatement(sql);
+            PreparedStatement preparedStatement=connection.connectDB().prepareStatement(sql);
             preparedStatement.setString(1,username.getText());
             preparedStatement.setString(2,password.getText());
-            resultSet=preparedStatement.executeQuery();
+            ResultSet resultSet=preparedStatement.executeQuery();
 
             if (resultSet.next()){
                 loginScreenMessageLabel.setText("Login Succeed");
@@ -66,6 +63,8 @@ public class HelloController {
 
                 stage.setScene(scene);
                 stage.show();
+
+
 
 
 

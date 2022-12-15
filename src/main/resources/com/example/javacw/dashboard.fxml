@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.AreaChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.chart.PieChart?>
@@ -12,11 +12,13 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="dashboardPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="757.0" prefWidth="1400.0" stylesheets="" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javacw.DashboardController">
@@ -41,12 +43,19 @@
                                       <Font name="System Bold" size="12.0" />
                                   </font>
                               </Label>
-                              <Label id="topData" layoutX="84.0" layoutY="35.0" text="\$75,270.25">
+                              <Label id="topData" fx:id="TotalSalesLabel" layoutX="84.0" layoutY="35.0" text="\$75,270.25">
                                   <font>
                                       <Font name="System Bold" size="12.0" />
                                   </font>
                               </Label>
                           </children>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.10000000149011612" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                       </Pane>
                       <Pane id="topContainer" fx:id="topContainer1" layoutX="432.0" layoutY="30.0" prefHeight="91.0" prefWidth="287.0" stylesheets="@../../../home.css">
                           <children>
@@ -60,8 +69,15 @@
                                   </children>
                               </Pane>
                               <Label id="topTitleText" fx:id="topTitleText1" layoutX="88.0" layoutY="18.0" stylesheets="@../../../home.css" text="Total items" />
-                              <Label id="topData" layoutX="84.0" layoutY="35.0" text="1352" />
+                              <Label id="topData" fx:id="TotalItemsLabel" layoutX="84.0" layoutY="35.0" text="1352" />
                           </children>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.10000000149011612" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                       </Pane>
                       <Pane id="topContainer" fx:id="topContainer2" layoutX="747.0" layoutY="30.0" prefHeight="91.0" prefWidth="287.0" stylesheets="@../../../home.css">
                           <children>
@@ -75,8 +91,15 @@
                                   </children>
                               </Pane>
                               <Label id="topTitleText" fx:id="topTitleText2" layoutX="88.0" layoutY="18.0" stylesheets="@../../../home.css" text="Average sale" />
-                              <Label id="topData" layoutX="84.0" layoutY="35.0" stylesheets="@../../../home.css" text="\$99.99" />
+                              <Label id="topData" fx:id="AverageSaleLabel" layoutX="84.0" layoutY="35.0" stylesheets="@../../../home.css" text="\$99.99" />
                           </children>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.10000000149011612" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                       </Pane>
                       <Pane id="topContainer" fx:id="topContainer3" layoutX="1066.0" layoutY="30.0" prefHeight="91.0" prefWidth="287.0" stylesheets="@../../../home.css">
                           <children>
@@ -90,42 +113,80 @@
                                   </children>
                               </Pane>
                               <Label id="topTitleText" fx:id="topTitleText3" layoutX="87.0" layoutY="18.0" stylesheets="@../../../home.css" text="Count of sale" />
-                              <Label id="topData" layoutX="87.0" layoutY="35.0" text="667" />
+                              <Label id="topData" fx:id="CountOfSaleLabel" layoutX="87.0" layoutY="35.0" text="667" />
                           </children>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.10000000149011612" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                       </Pane>
-                      <Pane fx:id="chartContainer" layoutX="137.0" layoutY="142.0" prefHeight="388.0" prefWidth="918.0" stylesheets="@../../../home.css">
+                      <Pane fx:id="chartContainer" layoutX="116.0" layoutY="142.0" prefHeight="388.0" prefWidth="920.0" stylesheets="@../../../home.css">
                           <children>
                               <PieChart fx:id="pieChart" layoutX="470.0" layoutY="113.0" prefHeight="230.0" prefWidth="307.0" />
-                        <BarChart fx:id="sales_barChart" layoutX="20.0" layoutY="23.0" prefHeight="338.0" prefWidth="883.0">
+                        <AreaChart fx:id="sales_barChart" alternativeRowFillVisible="false" createSymbols="false" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" layoutX="17.0" layoutY="33.0" legendVisible="false" prefHeight="322.0" prefWidth="887.0" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
                           <xAxis>
                             <CategoryAxis side="BOTTOM" />
                           </xAxis>
                           <yAxis>
                             <NumberAxis side="LEFT" />
                           </yAxis>
-                        </BarChart>
-                        <Label layoutX="297.0" layoutY="69.0" prefHeight="17.0" prefWidth="210.0" text="Still Under development" />
+                        </AreaChart>
+                        <Label layoutX="38.0" layoutY="14.0" text="Sales over time by value" />
                           </children>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.10000000149011612" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                       </Pane>
                       <Pane fx:id="pieChartContainer" layoutX="1066.0" layoutY="142.0" prefHeight="388.0" prefWidth="287.0" stylesheets="@../../../home.css">
                           <children>
                               <Separator layoutX="39.0" layoutY="252.0" prefWidth="210.0" />
                         <Label layoutX="116.0" layoutY="111.0" text="Still under dvelopment" />
                           </children>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.10000000149011612" />
+                           </color>
+                        </DropShadow>
+                     </effect>
                       </Pane>
                       <Pane fx:id="topSellingChannelContainer" layoutX="116.0" layoutY="548.0" prefHeight="177.0" prefWidth="606.0" stylesheets="@../../../home.css">
                      <children>
                         <Label layoutX="287.0" layoutY="59.0" prefHeight="17.0" prefWidth="210.0" text="Still Under development" />
-                     </children></Pane>
+                     </children>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.10000000149011612" />
+                           </color>
+                        </DropShadow>
+                     </effect></Pane>
                       <Pane fx:id="topSellingItemContainer" layoutX="757.0" layoutY="548.0" prefHeight="177.0" prefWidth="596.0" stylesheets="@../../../home.css">
                      <children>
                         <Label layoutX="366.0" layoutY="72.0" prefHeight="17.0" prefWidth="179.0" text="Still under development" />
-                     </children></Pane>
-                  <Label layoutX="154.0" layoutY="123.0" prefHeight="17.0" prefWidth="210.0" text="Still Under development" />
-                  <Label layoutX="477.0" layoutY="123.0" prefHeight="17.0" prefWidth="210.0" text="Still Under development" />
-                  <Label layoutX="786.0" layoutY="113.0" prefHeight="17.0" prefWidth="210.0" text="Still Under development" />
-                  <Label layoutX="1121.0" layoutY="123.0" prefHeight="17.0" prefWidth="210.0" text="Still Under development" />
-                  <Pane fx:id="topSellingItemContainer1" layoutX="767.0" layoutY="558.0" prefHeight="177.0" prefWidth="596.0" stylesheets="@../../../home.css" />
+                     </children>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.10000000149011612" />
+                           </color>
+                        </DropShadow>
+                     </effect></Pane>
+                  <Pane fx:id="topSellingItemContainer1" layoutX="767.0" layoutY="558.0" prefHeight="177.0" prefWidth="596.0" stylesheets="@../../../home.css">
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.10000000149011612" />
+                           </color>
+                        </DropShadow>
+                     </effect></Pane>
                   </children>
               </Pane>
          </children>
@@ -140,33 +201,36 @@
                </children>
             </AnchorPane>
          </children></VBox>
-      <AnchorPane fx:id="inventoryPage" layoutX="62.0" prefHeight="800.0" prefWidth="1338.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="inventoryPage" layoutX="62.0" prefHeight="800.0" prefWidth="1338.0" stylesheets="@../../../home.css" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="62.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <AnchorPane layoutX="30.0" layoutY="23.0" prefHeight="752.0" prefWidth="341.0">
                <children>
-                  <AnchorPane layoutX="14.0" layoutY="16.0" prefHeight="698.0" prefWidth="432.0" style="-fx-background-color: white; -fx-background-radius: 6px;" stylesheets="@../../../home.css">
+                  <AnchorPane layoutX="14.0" layoutY="16.0" prefHeight="698.0" prefWidth="432.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10px;" stylesheets="@../../../home.css">
                      <children>
                         <ImageView fitHeight="280.0" fitWidth="188.0" layoutX="8.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
-                        <TextField fx:id="movieIdInput" layoutX="32.0" layoutY="341.0" prefHeight="36.0" prefWidth="110.0" promptText="MovieID" />
-                        <TextField fx:id="movieNameInput" layoutX="32.0" layoutY="428.0" prefHeight="36.0" prefWidth="129.0" promptText="Movie Name" />
-                        <TextField fx:id="priceInput" layoutX="32.0" layoutY="485.0" prefHeight="36.0" prefWidth="129.0" promptText="Price" />
-                        <ComboBox fx:id="statusComboBox" layoutX="193.0" layoutY="416.0" prefHeight="48.0" prefWidth="202.0" promptText="Status" />
-                        <ComboBox fx:id="categoryComboBox" layoutX="171.0" layoutY="341.0" onAction="#addProductCombo" prefHeight="36.0" prefWidth="210.0" promptText="Category" />
-                        <Button fx:id="addBtn" layoutX="72.0" layoutY="561.0" mnemonicParsing="false" onAction="#addDataIntoInventory" prefHeight="36.0" prefWidth="79.0" text="ADD" />
-                        <Button fx:id="updateBtn" layoutX="231.0" layoutY="561.0" mnemonicParsing="false" onMouseClicked="#updateTableData" prefHeight="36.0" prefWidth="79.0" text="UPDATE" />
-                        <Button fx:id="deleteBtn" layoutX="72.0" layoutY="627.0" mnemonicParsing="false" onAction="#removeDataFromTable" prefHeight="36.0" prefWidth="79.0" text="DELETE" />
-                        <Button layoutX="236.0" layoutY="627.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="79.0" text="Button" />
-                        <TextField fx:id="itemsAmountInput" layoutX="193.0" layoutY="485.0" prefHeight="36.0" prefWidth="202.0" promptText="Items amount in stock" />
+                        <TextField fx:id="movieIdInput" layoutX="54.0" layoutY="250.0" prefHeight="36.0" prefWidth="318.0" promptText="MovieID" stylesheets="@../../../home.css" />
+                        <TextField fx:id="movieNameInput" layoutX="54.0" layoutY="318.0" prefHeight="36.0" prefWidth="318.0" promptText="Movie Name" stylesheets="@../../../home.css" />
+                        <TextField fx:id="priceInput" layoutX="54.0" layoutY="565.0" prefHeight="36.0" prefWidth="318.0" promptText="Price" />
+                        <ComboBox fx:id="statusComboBox" layoutX="54.0" layoutY="374.0" prefHeight="36.0" prefWidth="318.0" promptText="Status" stylesheets="@../../../home.css" />
+                        <ComboBox fx:id="categoryComboBox" layoutX="54.0" layoutY="433.0" onAction="#addProductCombo" prefHeight="36.0" prefWidth="318.0" promptText="Category" stylesheets="@../../../home.css" />
+                        <Button fx:id="addBtn" layoutX="314.0" layoutY="641.0" mnemonicParsing="false" onAction="#addDataIntoInventory" prefHeight="36.0" prefWidth="79.0" text="ADD" />
+                        <Button fx:id="updateBtn" layoutX="174.0" layoutY="641.0" mnemonicParsing="false" onMouseClicked="#updateTableData" prefHeight="36.0" prefWidth="79.0" text="UPDATE" />
+                        <Button fx:id="deleteBtn" layoutX="50.0" layoutY="641.0" mnemonicParsing="false" onAction="#removeDataFromTable" prefHeight="36.0" prefWidth="79.0" text="DELETE" />
+                        <TextField fx:id="itemsAmountInput" layoutX="54.0" layoutY="502.0" prefHeight="36.0" prefWidth="318.0" promptText="Items amount in stock" />
                         <Button fx:id="importBtn" layoutX="268.0" layoutY="112.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="139.0" text="Import" />
                         <Label layoutX="268.0" layoutY="160.0" prefHeight="17.0" prefWidth="172.0" text="Still under development" />
                         <Label layoutX="14.0" layoutY="112.0" prefHeight="17.0" prefWidth="229.0" text="Still under development for image import" />
+                        <Label layoutX="66.0" layoutY="232.0" text="Movie ID" />
+                        <Label layoutX="59.0" layoutY="300.0" text="Move Name" />
+                        <Label layoutX="66.0" layoutY="484.0" text="Items Amount in Stock" />
+                        <Label layoutX="66.0" layoutY="547.0" text="Price" />
                      </children>
                   </AnchorPane>
                </children></AnchorPane>
-            <AnchorPane layoutX="498.0" layoutY="36.0" prefHeight="698.0" prefWidth="818.0" style="-fx-background-color: white; -fx-background-radius: 6px;" stylesheets="@../../../home.css">
+            <AnchorPane layoutX="498.0" layoutY="36.0" prefHeight="698.0" prefWidth="818.0" style="-fx-background-color: white; -fx-background-radius: 10px;" stylesheets="@../../../home.css">
                <children>
                   <TextField fx:id="inventorySearchField" layoutX="40.0" layoutY="67.0" onAction="#searchFromInventoryTable" onKeyReleased="#searchFromInventoryTable" prefHeight="36.0" prefWidth="318.0" promptText="search by movie id, movie name , category  or availability" />
-                  <TableView fx:id="inventoryTable" layoutX="14.0" layoutY="155.0" onMouseClicked="#showTableDataInInputFields" prefHeight="520.0" prefWidth="789.0">
+                  <TableView fx:id="inventoryTable" layoutX="10.0" layoutY="155.0" onMouseClicked="#showTableDataInInputFields" prefHeight="520.0" prefWidth="790.0">
                     <columns>
                       <TableColumn fx:id="inventory_col_movieid" prefWidth="75.0" text="Movie ID" />
                       <TableColumn fx:id="inventory_col_moviename" prefWidth="302.0" text="Movie Name" />
@@ -234,7 +298,6 @@
                      </font>
                   </Label>
                   <Label layoutX="39.0" layoutY="291.0" text="Quantity:" />
-                  <Button layoutX="39.0" layoutY="599.0" mnemonicParsing="false" onAction="#deleteTableData" onMouseClicked="#showSalesTableData" prefHeight="29.0" prefWidth="299.0" text="DELETE RECORD" />
                </children>
             </AnchorPane>
          </children>

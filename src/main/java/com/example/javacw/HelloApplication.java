@@ -16,8 +16,8 @@ public class HelloApplication extends Application {
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.initStyle(StageStyle.UNDECORATED);
-        stage.setWidth(1300);
-        stage.setHeight(800);
+        stage.setWidth(666);
+        stage.setHeight(459);
         stage.centerOnScreen();
         stage.show();
 

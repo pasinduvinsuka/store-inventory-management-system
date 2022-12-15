@@ -9,6 +9,8 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 
 public class Dashboard extends Application {
+    private Stage stage;
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("dashboard.fxml"));
@@ -24,6 +26,12 @@ public class Dashboard extends Application {
 
 
     }
+
+
+
+
+
+
 
     public static void main(String[] args) {
         launch();

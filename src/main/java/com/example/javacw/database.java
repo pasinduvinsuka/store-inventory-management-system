@@ -6,17 +6,17 @@ import java.sql.SQLException;
 
 public class database {
 
-    public Connection connectDB(){
+    public Connection connectDB() {
 
+        Connection connection;
         try {
-            String databaseName="dvd";
-            String url="jdbc:mysql://localhost:3306/"+databaseName;
-            String dbUsername="root";
-            String dbPassword="password";
+            String databaseName = "dvd";
+            String url = "jdbc:mysql://localhost:3306/" + databaseName;
+            String dbUsername = "root";
+            String dbPassword = "password";
 
 
-            Connection connection= DriverManager.getConnection(url,dbUsername,dbPassword);
-
+            connection = DriverManager.getConnection(url, dbUsername, dbPassword);
 
 
         } catch (SQLException e) {
@@ -24,7 +24,7 @@ public class database {
         }
 
 
-        return null;
+        return connection;
     }
 
 

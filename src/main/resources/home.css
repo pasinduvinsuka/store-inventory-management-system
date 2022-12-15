@@ -8,7 +8,7 @@
 /*Top-Area*/
 #topContainer{
     -fx-background-color: white;
-    -fx-background-radius: 6px;
+    -fx-background-radius: 8px;
 }
 
 #topIconContainer{
@@ -51,5 +51,117 @@
 
 #crudPane{
     -fx-background-radius: 6px;
+    -fx-background-color: white;
+}
+
+#movieIdInput{
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+}
+
+#movieNameInput{
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+}
+
+#statusComboBox{
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+    -fx-background-color: white;
+    -fx-border-color: #bcbcbc;
+}
+
+#categoryComboBox{
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+    -fx-background-color: white;
+    -fx-border-color: #bcbcbc;
+}
+
+#itemsAmountInput{
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+}
+
+#priceInput{
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+}
+
+#inventorySearchField{
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+}
+
+#deleteBtn{
+    -fx-background-color: #c91f1f;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+}
+
+#updateBtn{
+    -fx-background-color: #242496;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+}
+
+#addBtn{
+    -fx-background-color: #039403;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+}
+
+#inventoryPage{
+    -fx-background-color: #fafafd;
+}
+
+#ff{
+    -fx-background-color: #ffffff;
+}
+
+/* INVENTORY TABLE STYLE*/
+
+#inventoryTable{
+    -fx-background-color: white;
+
+}
+
+#inventory_col_movieid{
+
+    -fx-border-color: #b4b4b4;
+
+
+
+}
+
+#inventory_col_moviename{
+    -fx-border-color: #b4b4b4;
+}
+
+#inventory_col_category{
+    -fx-border-color: #b4b4b4;
+}
+
+#inventory_col_price{
+    -fx-border-color: #b4b4b4;
+}
+
+#inventory_col_itemsInStock{
+    -fx-border-color: #b4b4b4;
+}
+
+#inventory_col_status{
+    -fx-border-color: #b4b4b4;
+}
+
+/*sales chart style*/
+
+#sales_barChart{
     -fx-background-color: white;
 }
