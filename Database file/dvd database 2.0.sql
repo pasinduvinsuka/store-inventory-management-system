@@ -41,7 +41,7 @@ CREATE TABLE `inventory` (
 
 LOCK TABLES `inventory` WRITE;
 /*!40000 ALTER TABLE `inventory` DISABLE KEYS */;
-INSERT INTO `inventory` VALUES (1,'Hello World','null',450,120,'null'),(2,'Hello Avatar','action',343,14,'Not Available'),(3,'Glass Onion: A Knives Out Mystery','action',543,11,'Available'),(4,'Argylle ','action',543,11,'Available'),(5,'Asteroid Cityyyyy','null',547,10,'null');
+INSERT INTO `inventory` VALUES (2,'android world','action',343,14,'Available'),(3,'Glass Onion: A Knives Out Mystery0222','null',543,11,'null'),(33,'ddd','action',2332,33,'Available'),(40,'World War','action',50,10,'Available'),(57,'Avatarr34','action',100,30,'Not Available'),(654,'new world','action',100,46,'Available');
 /*!40000 ALTER TABLE `inventory` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -79,12 +79,12 @@ DROP TABLE IF EXISTS `sales`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sales` (
   `sales_id` int NOT NULL AUTO_INCREMENT,
-  `sales_date` datetime DEFAULT NULL,
+  `sales_date` date DEFAULT NULL,
   `movie_name` varchar(120) DEFAULT NULL,
   `quantity` varchar(45) DEFAULT NULL,
   `total_price` int DEFAULT NULL,
   PRIMARY KEY (`sales_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=105 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -93,7 +93,7 @@ CREATE TABLE `sales` (
 
 LOCK TABLES `sales` WRITE;
 /*!40000 ALTER TABLE `sales` DISABLE KEYS */;
-INSERT INTO `sales` VALUES (31,'2022-12-22 00:00:00','Asteroid City','100',500),(37,'2022-12-11 00:00:00','Argylle ','10',5430),(43,'2022-11-30 00:00:00','Everything Everywhere All At Once','4',1800),(44,'2022-12-14 00:00:00','Asteroid City','1',547);
+INSERT INTO `sales` VALUES (68,'2022-12-30','Glass Onion: A Knives Out Mystery0222','10',5430),(70,'2022-12-26','Hello Avatar','1',343),(71,'2022-12-17','Hello World','10',4500),(72,'2022-12-30','Glass Onion: A Knives Out Mystery0222','1',543),(73,'2023-01-07','Hello World','1',450),(74,'2023-01-07','Hello World','2',900),(75,'2023-01-07','Hello World','2',900),(76,'2023-01-07','Hello World','2',900),(77,'2023-01-07','Hello World','2',900),(78,'2023-01-07','Hello World','2',900),(79,'2023-01-07','Hello World','2',900),(80,'2023-01-07','Hello World','2',900),(81,'2023-01-07','Hello World','2',900),(82,'2023-01-07','Hello World','2',900),(83,'2023-01-07','Hello World','2',900),(84,'2023-01-07','Hello Avatar','2',686),(85,'2023-01-07','Glass Onion: A Knives Out Mystery0222','2',1086),(86,'2022-12-26','Glass Onion: A Knives Out Mystery0222','4',2172),(87,'2023-10-08','Glass Onion: A Knives Out Mystery0222','2',1086),(88,'2023-10-09','Hello Avatar','5',1715),(89,'2022-12-14','nimaa','10',100),(90,'2023-11-15','Glass Onion: A Knives Out Mystery0222','10',5430),(91,'2023-11-28','android world','10',3430),(92,'2023-11-28','android world','10',3430),(93,'2022-12-01','Avatar','5',500),(94,'2022-12-01','android world','2',686),(95,'2022-12-02','Glass Onion: A Knives Out Mystery0222','3',1629),(96,'2022-12-15','android world','1',343),(97,'2022-12-15','android world','1',343),(98,'2022-12-15','android world','1',343),(99,'2022-12-15','android world','1',343),(100,'2022-12-15','android world','1',343),(101,'2022-12-15','android world','10',3430),(102,'2022-12-03','ddd','1',2332),(103,'2022-12-29','Glass Onion: A Knives Out Mystery0222','100',54300),(104,'2023-12-08','new world','10',1000);
 /*!40000 ALTER TABLE `sales` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -132,4 +132,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-12-12 23:56:14
+-- Dump completed on 2022-12-16 14:15:47
